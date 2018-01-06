@@ -1,0 +1,22 @@
+/* FACEBOOK, GOOGLE PLUS */
+
+// Facebook stránka (.fb-page-cover) - není v html
+
+.socialbox {
+  display: flex;
+  flex-direction: row;
+  // horizontální zarovnání položek
+  align-items: center;
+  margin: 20px 0 0 32px;
+  .fb-like-cover {
+    margin-right: 5px;
+  }  
+  .google-plus {
+    // má jakýsi vnitřní pravý padding takže v některých případech není pěkně zarovnán s okolím
+    // pro tyto případy použít v html jeho speciální atribut align="right"
+    // odstup od ostatních tlačítek, horizontální zarovnání 
+    margin: 4px 8px 0 8px;
+  }
+}
+
+/* --FACEBOOK, GOOGLE PLUS */

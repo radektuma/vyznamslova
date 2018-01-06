@@ -1,1 +1,68 @@
+/* FORMULÁŘE */
+form {
+  margin: 0;
+  input, button {
+    /* odstranit defaultní styly Safari pro inputy a buttony */
+    -webkit-appearance: none;
+    border-radius: 0;
+    // gulp-cssnext negeneruje tento vendor prefix, proto napsáno do less
+    -webkit-border-radius: 0;
+  }
+}
 
+/* Vyhladavanie */
+#search_box {
+	margin: 30px 0 20px 0;
+	text-align: center;
+  // trik na odstranění bílých znaků mezi elementy (způsobují mezeru mezi textovým polem a buttonem) 
+  font-size: 0;
+  #vyznamslova, button {
+    // srovnání výšky obou prvků
+    box-sizing: border-box;
+    height: 44px;
+    border: 2px solid #EF4A31;
+    font-size: 16px;
+  } 
+  #vyznamslova {
+    background: #ffffff url(images/lupa.png) no-repeat 5% 50%;
+    color: #EF4A31;
+    outline: none;
+  }
+  button {
+  	width: 60px;
+  	color: #FFFFFF;
+  	background: #EF4A31;
+  	cursor: pointer;
+  	padding: 0;
+    &:hover {
+      color: #dae4fc;
+    }  
+  }
+  @media (min-width: 300px) {
+    #vyznamslova {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;  
+    }
+    button {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;  
+    }  
+  }  
+  @media (min-width: 600px) {
+    button {
+      width: 100px;
+    }
+  }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    padding-left: 4rem;
+  }  
+  @media (min-width: 1200px) {
+    text-align: left;
+    margin: 30px 0 20px 10px;
+    padding-left: 20px; 
+    #vyznamslova {
+      width: 230px;
+    }
+  }
+}
+/* --FORMULÁŘE */
