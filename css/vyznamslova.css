@@ -1,1 +1,632 @@
-
+/* CSS - VyznamSlov.sk
+ --- 27.01.2014, Lubos Demovic [demovic@zones.sk]
+ --- 06.01.2018 - responzivna cast: Radek Tuma [radek.tuma@seznam.cz]
+*/
+/* BASE TYPOGRAPHY */
+html {
+  margin: 0;
+}
+body {
+  background: #F8F8F8 url('images/stol.png') repeat top;
+  padding: 0;
+  font: 0.7em 'Raleway', sans-serif, Tahoma, Arial, Verdana, sans-serif;
+  line-height: 1.6em;
+  margin: 0;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+a:hover {
+  color: #808080;
+  text-decoration: underline;
+}
+p {
+  margin-bottom: 5px;
+}
+textarea {
+  font-size: 12px;
+}
+h1 {
+  font-family: "Lucida Sans", 'Raleway', sans-serif, Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: #333333;
+  padding: 10px 0 0 10px;
+  margin: 20px 4px 20px 20px;
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 36px;
+}
+h2 {
+  color: #333333;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.1em;
+  padding: 12px 0 0 0;
+  margin: 0 10px 0 0;
+}
+label {
+  margin-top: 5px;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+/* --BASE TYPOGRAPHY */
+/* OBRÁZKY */
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+/* --OBRÁZKY */
+/* TABULKY */
+/* obal pro scrollování tabulek na menších displejích */
+.table_responsive {
+  overflow-x: auto;
+}
+td,
+th {
+  font-family: 'Raleway', sans-serif, Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px;
+  font-size: 11px;
+  text-align: left;
+}
+th {
+  font-weight: bold;
+}
+td {
+  padding-left: 10px;
+}
+/* Register tabulka */
+.slovnik_register {
+  background: #ffffff;
+  margin: 3px auto;
+  border: 1px solid #D7D7D7;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.slovnik_register tr {
+  color: #555555;
+}
+.slovnik_register tr:hover {
+  background: #FFFFDD;
+}
+.slovnik_register td {
+  border: 1px solid #D7D7D7;
+  font-size: 13px;
+}
+.slovnik_register td a {
+  color: #555555;
+}
+.slovnik_register tr:nth-child(odd) {
+  background: #F8F8F8;
+}
+.slovnik_register tr:nth-child(odd):hover {
+  background: #FFFFDD;
+}
+.slovnik_register .slovo_active,
+.slovnik_register .slovo_active a {
+  background: #E74C3C;
+  color: #ffffff;
+}
+.slovnik_register strong {
+  color: #636363;
+}
+.slovnik_register .slovo_active strong {
+  color: #ffffff;
+}
+@media (min-width: 900px) {
+  .slovnik_register {
+    margin: .5rem auto;
+    max-width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .slovnik_register td {
+    padding: 4px 10px 4px 15px;
+  }
+}
+/* --TABULKY */
+/* FORMULÁŘE */
+form {
+  margin: 0;
+}
+form input,
+form button {
+  /* odstranit defaultní styly Safari pro inputy a buttony */
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+/* Vyhladavanie */
+#search_box {
+  margin: 30px 0 20px 0;
+  text-align: center;
+  font-size: 0;
+}
+#search_box #vyznamslova,
+#search_box button {
+  box-sizing: border-box;
+  height: 44px;
+  border: 2px solid #EF4A31;
+  font-size: 16px;
+}
+#search_box #vyznamslova {
+  background: #ffffff url(images/lupa.png) no-repeat 5% 50%;
+  color: #EF4A31;
+  outline: none;
+}
+#search_box button {
+  width: 60px;
+  color: #FFFFFF;
+  background: #EF4A31;
+  cursor: pointer;
+  padding: 0;
+}
+#search_box button:hover {
+  color: #dae4fc;
+}
+@media (min-width: 300px) {
+  #search_box #vyznamslova {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  #search_box button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+@media (min-width: 600px) {
+  #search_box button {
+    width: 100px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  #search_box {
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  #search_box {
+    text-align: left;
+    margin: 30px 0 20px 10px;
+    padding-left: 20px;
+  }
+  #search_box #vyznamslova {
+    width: 230px;
+  }
+}
+/* --FORMULÁŘE */
+/* PAGINATION */
+.posuvnik {
+  color: #4A4A4A;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  margin: 0 auto;
+}
+.posuvnik a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+.posuvnik .akt_strana {
+  background: #4763B2;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 2px 8px 2px 7px;
+}
+.posuvnik .kon_strana {
+  color: #EF4A31;
+}
+/* --PAGINATION */
+/* FACEBOOK, GOOGLE PLUS */
+.socialbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 0 32px;
+}
+.socialbox .fb-like-cover {
+  margin-right: 5px;
+}
+.socialbox .google-plus {
+  margin: 4px 8px 0 8px;
+}
+/* --FACEBOOK, GOOGLE PLUS */
+/* AD */
+/* Reklamny format: Skycrape 120x600 px*/
+.reklama_160x600 {
+  width: 160px;
+  height: 600px;
+  background: red;
+  position: absolute;
+  left: 1102px;
+  margin-top: 35px;
+}
+.reklama_300x300 {
+  background: red;
+  margin-left: 20px;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .reklama_300x300 {
+    width: 300px;
+    height: 280px;
+  }
+}
+/* --AD */
+/* MAIN */
+/* Pozadie */
+@media (min-width: 1200px) {
+  #vyznamslov {
+    min-width: 1100px;
+    min-height: 850px;
+    background: transparent url('images/bg_vyznamslov.png') no-repeat top;
+  }
+}
+/* Hlavny obsah stranky */
+#content {
+  position: relative;
+  font-size: 12px;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  #content {
+    width: 960px;
+    /* 1100 - 70*2*/
+    padding: 141px 70px 0 70px;
+  }
+}
+/* Layout */
+#slovnik {
+  margin-top: 30px;
+  min-width: 100%;
+  background: transparent url('images/bg_vyznamslov_sm.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@supports not (grid-auto-flow: row) {
+  @media (max-width: 899px) {
+    #slovnik #slovnik_hladaj {
+      background: transparent url('images/kniha_sm_1.png');
+    }
+    #slovnik #slovnik_vysledky {
+      background: transparent url('images/kniha_sm_2.png');
+    }
+    #slovnik #slovnik_hladaj,
+    #slovnik #slovnik_vysledky {
+      min-height: 630px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+@supports (grid-auto-flow: row) {
+  @media (max-width: 899px) {
+    #slovnik {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+    }
+    #slovnik #slovnik_vysledky {
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+}
+@media (min-width: 900px) {
+  #slovnik {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: none;
+    background: transparent url('images/bg_vyznamslov_md.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  #slovnik #slovnik_hladaj,
+  #slovnik #slovnik_vysledky {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+#slovnik #slovnik_hladaj,
+#slovnik #slovnik_vysledky {
+  min-height: 630px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@media (min-width: 1200px) {
+  #slovnik {
+    display: block;
+    background: none;
+  }
+  #slovnik #slovnik_hladaj {
+    float: left;
+    width: 455px;
+  }
+  #slovnik #slovnik_vysledky {
+    float: right;
+    width: 455px;
+  }
+}
+/* --Layout */
+/* --MAIN */
+/* OSTATNÍ STYLY */
+#logo {
+  text-align: center;
+  padding-top: 112px;
+  padding-top: 7rem;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+}
+@media (min-width: 900px) {
+  #logo {
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  #logo {
+    margin-top: 70px;
+    padding-top: 0;
+  }
+}
+#taby {
+  float: right;
+}
+#taby #tab_color1,
+#taby #tab_color2,
+#taby #tab_color3 {
+  display: inline-block;
+  background: #E74C3C;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 0 2px;
+  padding: 4px 5px 3px 5px;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#taby #tab_color2 {
+  background: #4763B2;
+}
+#taby #tab_color3 {
+  background: #00BE9E;
+}
+@media (min-width: 600px) {
+  #taby #tab_color1,
+  #taby #tab_color2,
+  #taby #tab_color3 {
+    width: 120px;
+  }
+}
+/* Najvyhladavanejsie slova */
+#tagy {
+  font-size: 12px;
+  text-align: center;
+  line-height: 200%;
+}
+#tagy a {
+  color: #1571C8;
+  margin: 5px 10px;
+}
+#tagy span {
+  margin-top: 30px;
+}
+@media (min-width: 1200px) {
+  #tagy {
+    margin-top: 20px;
+  }
+}
+/* Vyznam slova - medzivysledky */
+#medzivysledky {
+  font-size: 14px;
+  line-height: 200%;
+  padding-left: 32px;
+  padding-left: 2rem;
+}
+#medzivysledky div {
+  background: url(images/sipka.png) no-repeat 0% 50%;
+}
+#medzivysledky a {
+  color: #1571C8;
+  padding-left: 20px;
+}
+@media (min-width: 900px) {
+  #medzivysledky {
+    padding-left: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  #medzivysledky {
+    margin: -10px 10px 0 32px;
+    padding-left: 0;
+  }
+}
+/* Vyznam slova */
+.vyznam_slova {
+  margin: 0 0 0 30px;
+}
+.vyznam_slova p .highlight {
+  background-color: #FCFECC;
+  padding: 4px 5px;
+  line-height: 200%;
+  font-size: 14px;
+}
+.vyznam_slova p .highlight2 {
+  background-color: #FCFECC;
+  padding: 1px 5px;
+  line-height: 150%;
+  font-size: 13px;
+}
+/* Register abeceda */
+#register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 30px 5px 30px;
+}
+#register #register_big_letter {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+#register #register_letters a {
+  display: inline-block;
+  color: #999999;
+  margin-right: 5px;
+}
+@media (min-width: 900px) {
+  #register {
+    padding: 30px 80px 10px 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #register {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 35px 20px 25px 30px;
+    padding: 0;
+  }
+}
+/* Cleaner */
+.cleaner:after {
+  display: block;
+  clear: both;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+* html .cleaner {
+  height: 1%;
+}
+.cleaner {
+  display: block;
+}
+.clear {
+  clear: both;
+}
+/* Hlasky */
+.hlaska_error,
+.hlaska_tip {
+  display: inline;
+  background: #FCFECC url(images/error.png) no-repeat 4% 50%;
+  color: #555555;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 20px 8px 40px;
+  margin: 10px 0 0 30px;
+}
+.hlaska_tip {
+  background: url(images/lupa.png) no-repeat 1% 50%;
+}
+/* Nastavenia */
+.center {
+  text-align: center;
+}
+.no_display {
+  display: none;
+}
+/* nadpis nad mrakem štítků (Najpopulárnešie cudzie slová za posledné obdobie) */
+.h1_titulka {
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .h1_titulka {
+    margin: 50px 0 0 0;
+  }
+}
+/* okraje prvků v #slovnik_hladaj */
+@media (max-width: 1199px) {
+  #tagy,
+  .h1_titulka {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  #slovnik_hladaj h1,
+  .vyznam_slova {
+    margin-left: 5rem;
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  #slovnik_hladaj h1 {
+    padding: 10px 0 0 10px;
+    margin: 20px 4px 20px 20px;
+  }
+}
+/* --OSTATNÍ STYLY */
+/* FOOTER */
+#footer {
+  color: #f8e8d5;
+  text-align: center;
+  font-size: 16px;
+}
+#footer a {
+  color: #f8e8d5;
+}
+#footer #zones_copyright {
+  margin-bottom: 7px;
+}
+#footer #zones_copyright .vygenerovane_za {
+  display: none;
+}
+#footer #zones_odkazy,
+#footer #zones_odkazy a {
+  color: #757575;
+  margin-top: 3px;
+}
+#footer #zones_odkazy a {
+  color: #f8e8d5;
+  margin: 0 10px;
+}
+#footer #zones_odkazy a:first-child {
+  margin-left: 0;
+}
+#footer #zones_odkazy img {
+  margin-bottom: -3px;
+}
+@media (min-width: 600px) {
+  #footer {
+    font-size: 13px;
+  }
+  #footer #zones_copyright .vygenerovane_za {
+    display: inline;
+  }
+}
+@media (max-width: 1199px) {
+  #footer {
+    margin-top: 10px;
+  }
+}
+/* --FOOTER */
