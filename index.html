@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <title>VýznamSlova.sk - Slovník cudzích slov online</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="cudzie slová, cudzie slová, význam slova, vyznam slova, význam, vyznam, synonymum, synonymá, synonyma">
+    <meta name="description" content="VýznamSlova.sk - Veľký slovník cudzích slov online, významy slov, cudzie slová, prevzaté slová, synonymá slov a definície slov.">
+    <meta name="robots" content="all, follow">
+    <meta name="author" content="(c) Tím Zones.sk – kontakt.zones.sk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://vyznamslova.zones.sk/favicon.ico" type="image/ico">
+    <link rel="icon" href="https://vyznamslova.zones.sk/favicon.ico">
+    <link rel="stylesheet" href="css/vyznamslova.css" media="screen">
+    <meta property="og:title" content="Slovník cudzích slov online">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vyznamslova.zones.sk/">
+    <meta property="og:image" content="https://vyznamslova.zones.sk/graphics/vyznamslova_fb.jpg">
+    <meta property="og:site_name" content="VýznamSlova.sk">
+    <meta property="fb:admins" content="1041042466">
+    <script src="https://www.zones.sk/function/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://vyznamslova.zones.sk/css/modules/jquery-ui.css" media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" media="screen">
+    <script src="https://vyznamslova.zones.sk/modules/function/jquery-ui.min.js"></script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-1816665-3', 'auto', {'legacyCookieDomain': 'zones.sk'});
+      ga('send', 'pageview');
+      
+      google_analytics_domain_name = "zones.sk";
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div class="clear"></div>
+    <div id="vyznamslov">
+      <div id="content">
+        <!-- Zalozky -->
+        <div id="taby">
+          <div id="tab_color1">Význam slov</div>
+          <div id="tab_color2">Cudzie slová</div>
+          <div id="tab_color3">Synonymá</div>
+        </div>
+        <div id="slovnik" class="cleaner">
+          <!-- Ľavá strana slovníka -->
+          <div id="slovnik_hladaj">
+            <div id="logo"><a href="index.html"><img src="graphics/logo_vyznamslova.png" alt="VýznamSlova.sk" title="VýznamSlova.sk - Slovník cudzích slov online" /></a></div>
+            <script>
+              /* Autocomplete pre vyhladavanie */
+              $(function() {
+              	function autocompleteVyznamSlova(idInput, ajax_url)
+              	{
+              		$(idInput)
+              		.bind( "keydown", function( event ) {
+              			if ( event.keyCode === $.ui.keyCode.TAB &&
+              					$( this ).data( "autocomplete" ).menu.active ) {
+              				event.preventDefault();
+              			}
+              		})
+              		.autocomplete({
+              			source: function( request, response ) {
+              				$.getJSON(ajax_url, {
+              					term: request.term
+              				}, response );
+              			},
+              			search: function() {
+              				var term = this.value;
+              				if ( term.length < 2 ) {
+              					return false;
+              				}
+              			}
+              		});
+              	}
+              	
+              	autocompleteVyznamSlova("#vyznamslova", "modules/ajax/autocomplete-vyznamslova.php");
+              });
+            </script>
+            <form id="search_box" action="https://vyznamslova.zones.sk/" method="post">
+              <input type="text" name="vyznamslova" id="vyznamslova" tabindex="1" value="">
+              <button tabindex="2">Hľadať</button>
+            </form>
+            <h1 class="h1_titulka">Najpopulárnešie cudzie slová za posledné obdobie</h1>
+            <div id="tagy">
+              <a href="https://vyznamslova.zones.sk/Atika" style="font-size: 130%;" title="Atika - význam slova">Atika</a>
+              <a href="https://vyznamslova.zones.sk/Babylon" style="font-size: 126%;" title="Babylon - význam slova">Babylon</a>
+              <a href="https://vyznamslova.zones.sk/Epifánia" style="font-size: 131%;" title="Epifánia - význam slova">Epifánia</a>
+              <a href="https://vyznamslova.zones.sk/Eros" style="font-size: 133%;" title="Eros - význam slova">Eros</a>
+              <a href="https://vyznamslova.zones.sk/Goliáš" style="font-size: 133%;" title="Goliáš - význam slova">Goliáš</a>
+              <a href="https://vyznamslova.zones.sk/Harpia" style="font-size: 131%;" title="Harpia - význam slova">Harpia</a>
+              <a href="https://vyznamslova.zones.sk/Ma" style="font-size: 132%;" title="Ma - význam slova">Ma</a>
+              <a href="https://vyznamslova.zones.sk/PaeDr." style="font-size: 139%;" title="PaeDr. - význam slova">PaeDr.</a>
+              <a href="https://vyznamslova.zones.sk/SI" style="font-size: 126%;" title="SI - význam slova">SI</a>
+              <a href="https://vyznamslova.zones.sk/Tantalove_muky" style="font-size: 134%;" title="Tantalove muky - význam slova">Tantalove muky</a>
+              <a href="https://vyznamslova.zones.sk/amazonka" style="font-size: 124%;" title="amazonka - význam slova">amazonka</a>
+              <a href="https://vyznamslova.zones.sk/aspirovať" style="font-size: 127%;" title="aspirovať - význam slova">aspirovať</a>
+              <a href="https://vyznamslova.zones.sk/dioskurovia" style="font-size: 126%;" title="dioskurovia - význam slova">dioskurovia</a>
+              <a href="https://vyznamslova.zones.sk/exodus" style="font-size: 135%;" title="exodus - význam slova">exodus</a>
+              <a href="https://vyznamslova.zones.sk/falus" style="font-size: 137%;" title="falus - význam slova">falus</a>
+              <a href="https://vyznamslova.zones.sk/fólia" style="font-size: 131%;" title="fólia - význam slova">fólia</a>
+              <a href="https://vyznamslova.zones.sk/galéa" style="font-size: 127%;" title="galéa - význam slova">galéa</a>
+              <a href="https://vyznamslova.zones.sk/gemini" style="font-size: 134%;" title="gemini - význam slova">gemini</a>
+              <a href="https://vyznamslova.zones.sk/gáza" style="font-size: 129%;" title="gáza - význam slova">gáza</a>
+              <a href="https://vyznamslova.zones.sk/ibis" style="font-size: 138%;" title="ibis - význam slova">ibis</a>
+              <a href="https://vyznamslova.zones.sk/kanón" style="font-size: 143%;" title="kanón - význam slova">kanón</a>
+              <a href="https://vyznamslova.zones.sk/kolón" style="font-size: 163%;" title="kolón - význam slova">kolón</a>
+              <a href="https://vyznamslova.zones.sk/kulancia,_kulantnosť" style="font-size: 149%;" title="kulancia, kulantnosť - význam slova">kulancia, kulantnosť</a>
+              <a href="https://vyznamslova.zones.sk/la" style="font-size: 142%;" title="la - význam slova">la</a>
+              <a href="https://vyznamslova.zones.sk/lezba,_lesba" style="font-size: 200%;" title="lezba, lesba - význam slova">lezba, lesba</a>
+              <a href="https://vyznamslova.zones.sk/macho,_mačo" style="font-size: 130%;" title="macho, mačo - význam slova">macho, mačo</a>
+              <a href="https://vyznamslova.zones.sk/pastis" style="font-size: 135%;" title="pastis - význam slova">pastis</a>
+              <a href="https://vyznamslova.zones.sk/set" style="font-size: 137%;" title="set - význam slova">set</a>
+              <a href="https://vyznamslova.zones.sk/silt" style="font-size: 125%;" title="silt - význam slova">silt</a>
+              <a href="https://vyznamslova.zones.sk/skrotum" style="font-size: 129%;" title="skrotum - význam slova">skrotum</a>
+            </div>
+          </div>
+          <!-- Pravá strana slovníka -->
+          <div id="slovnik_vysledky">
+            <div id="register">
+              <div id="register_big_letter">A</div>
+              <div id="register_letters">
+                <a href="https://vyznamslova.zones.sk/A" title="Zobraziť slová začínajúce na písmeno A"><strong>A</strong></a><a href="https://vyznamslova.zones.sk/B" title="Zobraziť slová začínajúce na písmeno B">B</a><a href="https://vyznamslova.zones.sk/C" title="Zobraziť slová začínajúce na písmeno C">C</a><a href="https://vyznamslova.zones.sk/D" title="Zobraziť slová začínajúce na písmeno D">D</a><a href="https://vyznamslova.zones.sk/E" title="Zobraziť slová začínajúce na písmeno E">E</a><a href="https://vyznamslova.zones.sk/F" title="Zobraziť slová začínajúce na písmeno F">F</a><a href="https://vyznamslova.zones.sk/G" title="Zobraziť slová začínajúce na písmeno G">G</a><a href="https://vyznamslova.zones.sk/H" title="Zobraziť slová začínajúce na písmeno H">H</a><a href="https://vyznamslova.zones.sk/I" title="Zobraziť slová začínajúce na písmeno I">I</a><a href="https://vyznamslova.zones.sk/J" title="Zobraziť slová začínajúce na písmeno J">J</a><a href="https://vyznamslova.zones.sk/K" title="Zobraziť slová začínajúce na písmeno K">K</a><a href="https://vyznamslova.zones.sk/L" title="Zobraziť slová začínajúce na písmeno L">L</a><a href="https://vyznamslova.zones.sk/M" title="Zobraziť slová začínajúce na písmeno M">M</a><a href="https://vyznamslova.zones.sk/N" title="Zobraziť slová začínajúce na písmeno N">N</a><a href="https://vyznamslova.zones.sk/O" title="Zobraziť slová začínajúce na písmeno O">O</a><a href="https://vyznamslova.zones.sk/P" title="Zobraziť slová začínajúce na písmeno P">P</a><a href="https://vyznamslova.zones.sk/Q" title="Zobraziť slová začínajúce na písmeno Q">Q</a><a href="https://vyznamslova.zones.sk/R" title="Zobraziť slová začínajúce na písmeno R">R</a><a href="https://vyznamslova.zones.sk/S" title="Zobraziť slová začínajúce na písmeno S">S</a><a href="https://vyznamslova.zones.sk/T" title="Zobraziť slová začínajúce na písmeno T">T</a><a href="https://vyznamslova.zones.sk/U" title="Zobraziť slová začínajúce na písmeno U">U</a><a href="https://vyznamslova.zones.sk/V" title="Zobraziť slová začínajúce na písmeno V">V</a><a href="https://vyznamslova.zones.sk/W" title="Zobraziť slová začínajúce na písmeno W">W</a><a href="https://vyznamslova.zones.sk/X" title="Zobraziť slová začínajúce na písmeno X">X</a><a href="https://vyznamslova.zones.sk/Y" title="Zobraziť slová začínajúce na písmeno Y">Y</a><a href="https://vyznamslova.zones.sk/Z" title="Zobraziť slová začínajúce na písmeno Z">Z</a>
+              </div>
+            </div>
+            <div class="table_responsive">
+              <table class="slovnik_register">
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abandonovať" title="prenechať štátu dovážaný tovar namiesto úhrady cla">abandonovať</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abatiša" title="predstavená ženského kláštora niektorých rádov rímskokatolíckej cirkvi">abatiša</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abaton" title="nezasväteným neprístupná časť chrámového areálu">abaton</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abaxiálny" title="odvrátený od stonky, od osi">abaxiálny</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abázia" title="neschopnosť chodiť">abázia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abažúr" title="tienidlo na lampu; šikmé okno pod stropom">abažúr</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abbé" title="kňazský titul vo Francúzsku, duchovný bez cirkevného úradu; označenie vychovávateľa v šľachtických rodinách">abbé</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ABC" title="American Broadcasting Company, americká rozhlasová a televízna spoločnosť">ABC</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abcoulomb" title="jednotka pre elektrický náboj, značka aC">abcoulomb</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abd" title="v mohamedánskych krajinách sluha a ctiteľ boha, neskôr súčasť arabských mien">abd</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/Abdéra" title="starogrécke „Kocúrkovo“">Abdéra</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/Abdérita" title="obyvateľ Abdéry; v prenesenom zmysle malomeštiak, obmedzenec">Abdérita</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abdikácia" title="vzdanie sa štátnej funkcie, úradu a pod.">abdikácia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abdikovať" title="vzdať sa trónu, vysokej funkcie či úradu">abdikovať</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abdómen" title="brucho; zadoček hmyzu">abdómen</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abdominálny" title="brušný">abdominálny</a></td>
+                  <td><a href="abdukcia.html" title="odtiahnutie, napr. paže od tela; odchýlenie, upaženie">abdukcia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/aberácia" title="odchýlka od normálneho stavu organizmu; chyba optickej šošovky prejavujúca sa dúhovým sfarbením; omyl páchateľa čo do predmetu trestného činu; chromozómová mutácia">aberácia</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abgébovať_sa" title="špiniť sa s niekým; strácať čas zbytočným konaním">abgébovať sa</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abiogenéza" title="samoplodenie, nesprávna predstava o vzniku života z neživého">abiogenéza</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abiogénny" title="bez účasti živých organizmov">abiogénny</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abionóza" title="fyzikálnymi a chemickými vplyvmi vyvolaná chyba rastlín">abionóza</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abiotický" title="neživý, neschopný života; týkajúci sa anorganickej zložky prírody">abiotický</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abiturient" title="absolvent školy; študent krátko pred a po záverečnej skúške">abiturient</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abjudikácia" title="odmietnutie žaloby súdom; rozhodnutie súdu">abjudikácia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abjurácia" title="verejné zrieknutie sa viery alebo učenia pod prísahou; krivá prísaha">abjurácia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ablácia" title="odnos sypkých zemín vetrom; povrchové roztápanie snehu alebo ľadovca; chirurgický zákrok na povrchu tela; patologické odlúpnutie sietnice">ablácia</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/ablaktácia" title="odstavenie mláďaťa; spôsob šľachtenia rastlín">ablaktácia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ablatív" title="6. pád skloňovania, vyjadrujúci odluku, východisko deja">ablatív</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ablaut" title="striedanie samohlások v slovách s rovnakým koreňom">ablaut</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/ablefária" title="chýbanie rias, mihalníc">ablefária</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ablegácia" title="vypovedanie, vyobcovanie, exkomunikácia">ablegácia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/ablepsia" title="slepota">ablepsia</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abnormalita" title="nepravidelnosť, odchýlka od normálu, zvláštnosť">abnormalita</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abnormálny" title="nenormálny, nezodpovedajúci pravidlu, nezvyčajný, zvláštny, odlišný">abnormálny</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abnormný" title="abnormálny">abnormný</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abolícia" title="zrušenie zákona; zastavenie súdneho konania udelením milosti">abolícia</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abolicionista" title="stúpenec abolicionizmu">abolicionista</a></td>
+                  <!--td><a href="https://vyznamslova.zones.sk/abolicionizmus" title="hnutie za zrušenie zákona; hnutie za zrušenie otroctva v USA začiatkom 19. storočia; hnutie za zrušenie trestu smrti">abolicionizmus</a></td-->
+                  <td><a href="https://vyznamslova.zones.sk/abolicionizmus" title="hnutie za zrušenie zákona; hnutie za zrušenie otroctva v USA začiatkom 19. storočia; hnutie za zrušenie trestu smrti">abolicionizmusssssssssssssssssssssssssssssssssssssssssssssssssssssssss</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://vyznamslova.zones.sk/abonent" title="predplatiteľ, napr. novín či koncertov">abonent</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abonentka" title="preukážka predplatiteľa">abonentka</a></td>
+                  <td><a href="https://vyznamslova.zones.sk/abonmán,_abonnement" title="predplatné, predplatenie, subskripcia">abonmán, abonnement</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="posuvnik">
+              <a href="A?strana=1" class="akt_strana">1</a>  |   
+              <a href="A?strana=2">2</a>  |   
+              <a href="A?strana=3">3</a>  |   
+              <a href="A?strana=4">4</a>  |   
+              <a href="A?strana=5">5</a>  |   
+              <a href="A?strana=6">6</a>  |   
+              <a href="A?strana=7">7</a>  |   
+              <a href="A?strana=8">8</a>  |   
+              <a href="A?strana=9">9</a>   
+              &hellip; <a href="A?strana=56" class="kon_strana">56</a>
+            </div>
+          </div>
+        </div>
+        <!-- Paticka -->
+        <div id="footer">
+          <div id="zones_copyright">
+            © 2008-2017            <a href="https://www.zones.sk/" title="Zones.sk - Referáty">Zones.sk - Najväčší študentský portál</a>.
+            Tento projekt podlieha <a href="https://www.gnu.org/copyleft/fdl.html" rel="nofollow">GNU FDL licencii</a>.
+            <span class="vygenerovane_za">Vygenerované za 0.005 s.</span>
+          </div>
+          <div id="zones_odkazy">
+            <a href="https://www.zones.sk/" title="Zones.sk - Najväčší študentský portál">Referáty</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://zmaturuj.zones.sk/maturita/" title="Zmaturuj.sk - Maturita">Maturita</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://monitor9.zones.sk/testovanie9/" title="Monitor9.sk - Testovanie 9">Testovanie 9</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://www.zones.sk/kalendar-udalosti/skolske-prazdniny/" title="Školské prázdniny">Prázdniny</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://superbrigady.zones.sk/" title="Študentské brigády">Brigády</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://najdipsc.zones.sk/" title="Vyhľadávanie PSČ Slovensko">PSČ</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://kurz-euro.zones.sk/" title="Kurz-Euro.sk - Aktuálne kurzy mien">Kurzy</a> <img src="graphics/slovnicek.png"alt=""/>
+            <a href="https://kurz-euro.zones.sk/kurzova-kalkulacka/" title="Kurz-Euro.sk - Prepočty mien">Kurzová kalkulačka</a>
+          </div>
+        </div>
+        <!-- Google Plus -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- Facebook -->
+        <script>
+          (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/sk_SK/sdk.js#xfbml=1&appId=622822911245826&version=v2.10';
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- JS -->
+        <script src="https://vyznamslova.zones.sk/modules/function/js_functions.js"></script>
+        <!-- ETARGET code for Audiences start -->
+        <script src="https://www.zones.sk/function/js/etarget_audience.js"></script>
+        <script> EtargetAudience('sk-46536'); </script>
+        <!-- ETARGET code for Audiences end -->	
+      </div>
+    </div>
+  </body>
+</html>
