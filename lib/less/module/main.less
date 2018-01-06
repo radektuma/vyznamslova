@@ -1,0 +1,92 @@
+/* MAIN */
+
+/* Pozadie */
+#vyznamslov {
+  @media (min-width: 1200px) {
+  	min-width: 1100px;
+  	min-height: 850px;
+    background: transparent url('images/bg_vyznamslov.png') no-repeat top;
+  }
+}
+/* Hlavny obsah stranky */
+#content { 
+	position: relative;
+	font-size: 12px;
+	margin: 0 auto;
+  @media (min-width: 1200px) { 
+    width: 960px; /* 1100 - 70*2*/
+    padding: 141px 70px 0 70px;
+  }
+}
+/* Layout */
+// https://www.root.cz/clanky/css-grid-revoluce-ve-web-designu/
+// https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
+// https://developer.mozilla.org/cs/docs/Web/CSS/@media
+// https://cloudfour.com/thinks/breaking-out-with-css-grid-layout/
+// https://cm.engineering/getting-to-know-css-grid-layout-818e43ca71a5
+// https://stackoverflow.com/questions/43352501/css-grid-content-to-use-free-space-but-scroll-when-bigger
+#slovnik {
+	margin-top: 30px;
+  min-width: 100%;
+  background: transparent url('images/bg_vyznamslov_sm.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;  
+  @supports not (grid-auto-flow: row) {
+    @media (max-width: 899px) {
+      #slovnik_hladaj {
+        background: transparent url('images/kniha_sm_1.png');
+      }
+      #slovnik_vysledky {
+        background: transparent url('images/kniha_sm_2.png');
+      }
+      #slovnik_hladaj, #slovnik_vysledky {
+        min-height: 630px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }      
+    }
+  }
+  @supports (grid-auto-flow: row) {
+    @media (max-width: 899px) {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      #slovnik_vysledky {
+        max-width: 100%;
+        // jinak nefunguje overflow u tabulky
+        overflow: auto;
+      }              
+    }
+  }   
+  @media (min-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    // box-sizing: border-box; nemá viditelný vliv na vzhled
+    background: none;
+    background: transparent url('images/bg_vyznamslov_md.png');
+    // background-repeat a background-size se musí znovu zadat, jinak to nefunguje
+    background-repeat: no-repeat;
+    background-size: 100% 100%;    
+    #slovnik_hladaj, #slovnik_vysledky {
+      flex: 1;
+    }
+  }
+  #slovnik_hladaj, #slovnik_vysledky {
+    min-height: 630px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }    
+  @media (min-width: 1200px) {
+    display: block;
+    background: none;
+    #slovnik_hladaj {
+    	float: left;
+    	width: 455px;
+    }
+    #slovnik_vysledky {
+    	float: right;
+    	width: 455px;
+    }
+  }
+}
+/* --Layout */
+/* --MAIN */
