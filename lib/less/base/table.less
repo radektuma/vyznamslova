@@ -4,6 +4,11 @@
 // https://www.w3schools.com/howto/howto_css_table_responsive.asp
 .table_responsive {
   overflow-x: auto;
+  margin: .5rem auto;
+  max-width: 85%;
+  @media (min-width: 900px) {
+    max-width: 75%;
+  }
 }
 
 td, th {
@@ -56,10 +61,6 @@ td {
     strong {
     	color: #ffffff;
     }  
-  }
-  @media (min-width: 900px) {
-    margin: .5rem auto;
-    max-width: 70%;
   }
   @media (min-width: 1200px) {
     td {
