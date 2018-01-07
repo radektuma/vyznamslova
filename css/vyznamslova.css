@@ -1,6 +1,6 @@
 /* CSS - VyznamSlov.sk
  --- 27.01.2014, Lubos Demovic [demovic@zones.sk]
- --- 06.01.2018 - responzivna cast: Radek Tuma [radek.tuma@seznam.cz]
+ --- 07.01.2018 - responzivna cast: Radek Tuma [radek.tuma@seznam.cz]
 */
 /* BASE TYPOGRAPHY */
 html {
@@ -63,6 +63,14 @@ img {
 /* obal pro scrollování tabulek na menších displejích */
 .table_responsive {
   overflow-x: auto;
+  margin: 8px auto;
+  margin: .5rem auto;
+  max-width: 85%;
+}
+@media (min-width: 900px) {
+  .table_responsive {
+    max-width: 75%;
+  }
 }
 td,
 th {
@@ -114,12 +122,6 @@ td {
 }
 .slovnik_register .slovo_active strong {
   color: #ffffff;
-}
-@media (min-width: 900px) {
-  .slovnik_register {
-    margin: .5rem auto;
-    max-width: 70%;
-  }
 }
 @media (min-width: 1200px) {
   .slovnik_register td {
@@ -339,9 +341,10 @@ form button {
   }
   #slovnik #slovnik_hladaj,
   #slovnik #slovnik_vysledky {
+    max-width: 50%;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 #slovnik #slovnik_hladaj,
