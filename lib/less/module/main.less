@@ -67,7 +67,11 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;    
     #slovnik_hladaj, #slovnik_vysledky {
-      flex: 1;
+      // https://stackoverflow.com/questions/29289071/flexbox-min-width-min-content-max-width
+      //min-width: 50%;
+      max-width: 50%;
+      //flex-basis: auto;
+      flex-grow: 1;
     }
   }
   #slovnik_hladaj, #slovnik_vysledky {
