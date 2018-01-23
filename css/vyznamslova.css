@@ -1,6 +1,6 @@
 /* CSS - VyznamSlov.sk
  --- 27.01.2014, Lubos Demovic [demovic@zones.sk]
- --- 20.01.2018 - responzivna cast: Radek Tuma [radek.tuma@seznam.cz]
+ --- 23.01.2018 - responzivna cast: Radek Tuma [radek.tuma@seznam.cz]
 */
 /* BASE TYPOGRAPHY */
 html,
@@ -13,12 +13,16 @@ body {
   font: 0.7em 'Raleway', sans-serif, Tahoma, Arial, Verdana, sans-serif;
   line-height: 1.6em;
 }
+h1,
+h2,
 a {
-  color: #333333;
+  color: #333;
+}
+a {
   text-decoration: none;
 }
 a:hover {
-  color: #808080;
+  color: gray;
   text-decoration: underline;
 }
 p {
@@ -29,7 +33,6 @@ textarea {
 }
 h1 {
   font-family: "Lucida Sans", 'Raleway', sans-serif, Verdana, Geneva, Arial, Helvetica, sans-serif;
-  color: #333333;
   padding: 10px 0 0 10px;
   margin: 20px 4px 20px 20px;
   font-weight: normal;
@@ -37,7 +40,6 @@ h1 {
   font-size: 36px;
 }
 h2 {
-  color: #333333;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.1em;
@@ -87,14 +89,14 @@ td {
 }
 /* Register tabulka */
 .slovnik_register {
-  background: #ffffff;
+  background: #fff;
   margin: 3px auto;
   border: 1px solid #D7D7D7;
   border-collapse: collapse;
   font-size: 13px;
 }
 .slovnik_register tr {
-  color: #555555;
+  color: #555;
 }
 .slovnik_register tr:hover {
   background: #FFFFDD;
@@ -104,7 +106,7 @@ td {
   font-size: 13px;
 }
 .slovnik_register td a {
-  color: #555555;
+  color: #555;
 }
 .slovnik_register tr:nth-child(odd) {
   background: #F8F8F8;
@@ -115,13 +117,13 @@ td {
 .slovnik_register .slovo_active,
 .slovnik_register .slovo_active a {
   background: #E74C3C;
-  color: #ffffff;
+  color: #fff;
 }
 .slovnik_register strong {
   color: #636363;
 }
 .slovnik_register .slovo_active strong {
-  color: #ffffff;
+  color: #fff;
 }
 @media (min-width: 1200px) {
   .slovnik_register td {
@@ -154,13 +156,13 @@ form button {
   font-size: 16px;
 }
 #search_box #vyznamslova {
-  background: #ffffff url(images/lupa.png) no-repeat 5% 50%;
+  background: #fff url(images/lupa.png) no-repeat 5% 50%;
   color: #EF4A31;
   outline: none;
 }
 #search_box button {
   width: 60px;
-  color: #FFFFFF;
+  color: #fff;
   background: #EF4A31;
   cursor: pointer;
   padding: 0;
@@ -213,7 +215,7 @@ form button {
 }
 .posuvnik .akt_strana {
   background: #4763B2;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   font-size: 14px;
   padding: 2px 8px 2px 7px;
@@ -398,7 +400,7 @@ form button {
 #taby #tab_color3 {
   display: inline-block;
   background: #E74C3C;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   margin: 0 0 0 2px;
   padding: 4px 5px 3px 5px;
@@ -517,16 +519,12 @@ form button {
     padding: 0;
   }
 }
-/* Cleaner */
-.clear {
-  clear: both;
-}
 /* Hlasky */
 .hlaska_error,
 .hlaska_tip {
   display: inline;
   background: #FCFECC url(images/error.png) no-repeat 4% 50%;
-  color: #555555;
+  color: #555;
   font-size: 13px;
   font-weight: bold;
   padding: 8px 20px 8px 40px;
@@ -546,7 +544,6 @@ form button {
 }
 /* nadpis nad mrakem štítků (Najpopulárnešie cudzie slová za posledné obdobie) */
 .h1_titulka {
-  color: #333333;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
